@@ -36,7 +36,7 @@ namespace Infraestructura.Repository
                                                                             JOIN params p ON true
                                                                             WHERE a.estado = false
                                                                               AND EXTRACT(YEAR FROM a.apertura) = p.idAnio
-                                                                              AND EXTRACT(MONTH FROM a.apertura) = p.idMes
+                                                                              AND (p.idMes = 0 OR EXTRACT(MONTH FROM a.apertura) = p.idMes)
                                                                               AND (p.idDia = 0 OR EXTRACT(DAY FROM a.apertura) = p.idDia)
                                                                             GROUP BY e.nombre, d.nombre, c.nombre, c.precioCosto, c.precioVenta, b.precio, b.estado
                                                                             ORDER BY e.nombre, d.nombre, c.nombre;
