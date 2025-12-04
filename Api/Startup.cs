@@ -59,8 +59,8 @@ namespace Api
             //SWAGER
             services.AddOpenApiDocument(document =>
             {
-                document.Title = "Api Restaurante REST";
-                document.Description = "Restaurante del sistema de la casa del tio rozch.";
+                document.Title = "Api Reportes REST";
+                document.Description = "Reportes del sistema de la casa del tio rozch.";
                 document.AddSecurity("JWT", [],
                     new OpenApiSecurityScheme
                     {
@@ -119,7 +119,7 @@ namespace Api
             app.UseOpenApi();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api Catalogos REST");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api Reportes REST");
                 c.RoutePrefix = string.Empty;
             });
             //app.UseHttpsRedirection();
