@@ -1,0 +1,11 @@
+
+/.vs
+/Api/bin
+/Api/obj
+/Api/Properties/launchSettings.json
+/Core/bin
+/Core/obj
+/Infraestructura/bin
+/Infraestructura/obj
+/Utils/bin
+/Utils/obj
